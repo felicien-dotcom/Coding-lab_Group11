@@ -28,9 +28,11 @@ initialize_system() {
  }
 
 secure_data() {
-    echo "Securing active_logs directory..."
+# Restricting active_logs so only the owner can read/write/access it
+    	echo "Securing active_logs directory..."
     chmod 700 active_logs
- echo "Current permissions for active_logs:"
+ # Showing the folder's permissions and its contents to confirm the change
+    echo "Current permissions for active_logs:"
     ls -ld active_logs
     ls -l active_logs
 
