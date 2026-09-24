@@ -40,5 +40,7 @@ secure_data() {
 main() {
      initialize_system
      secure-data
+
+echo "System Environment Secured on $(date)"
 }
 
