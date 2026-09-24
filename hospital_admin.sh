@@ -43,4 +43,4 @@ main() {
 
 echo "System Environment Secured on $(date)"
 }
-
+main
