@@ -4,7 +4,10 @@ process_vitals(){
   grep "CRITICAL" active_logs/heart_rate.log active_logs/temperature.log | \
   awk '
     {
-        print $1, $2, $NF
+        print $1, $2, $NF > "reports/critical_alerts.txt"
+    }
+    END {
+        print "Critical alerts written to reports/critical_alerts.txt"
     }'
 }
 
