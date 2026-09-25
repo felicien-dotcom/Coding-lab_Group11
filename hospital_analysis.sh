@@ -1,7 +1,11 @@
 #!/bin/bash 
 
 process_vitals(){
-  grep "CRITICAL" active_logs/heart_rate.log active_logs/temperature.log
+  grep "CRITICAL" active_logs/heart_rate.log active_logs/temperature.log | \
+  awk '
+    {
+        print $1, $2, $NF
+    }'
 }
 
 process_vitals
