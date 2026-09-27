@@ -23,5 +23,3 @@ for file in "$ACTIVE_DIR"/*.log; do
     touch "$file"
 
 done
-
-echo "Log rotation completed successfully."
