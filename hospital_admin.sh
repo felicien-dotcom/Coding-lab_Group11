@@ -35,5 +35,12 @@ secure_data() {
     echo "Current permissions for active_logs:"
     ls -ld active_logs
     ls -l active_logs
+}
 
-   
+main() {
+     initialize_system
+     secure-data
+
+echo "System Environment Secured on $(date)"
+}
+main
