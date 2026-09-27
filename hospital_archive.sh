@@ -23,3 +23,5 @@ for file in "$ACTIVE_DIR"/*.log; do
     touch "$file"
 
 done
+echo "The archive is successfully done"
+
