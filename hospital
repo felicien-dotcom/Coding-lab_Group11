@@ -1,6 +1,6 @@
-#!/bin/bash 
-water_audit()
-     awk '
+#!/bin/bash
+water_audit() {
+  awk '
     /ICU_WATER_RESERVE/ {
         sum += $NF  # Assumes the number is the last item on the line
         count++
@@ -16,7 +16,6 @@ water_audit()
         } else {
             print "No data found for ICU_WATER_RESERVE."
         }
-    }' active_logs/* 
+    }' grep -i "water" active_logs/*
 }
-
 water_audit
